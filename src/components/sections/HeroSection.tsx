@@ -7,7 +7,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({ onJoinBeta }: HeroSectionProps) => {
   return (
-    <section className="container mx-auto px-4 py-20" id="hero">
+    <section className="container mx-auto px-4 py-20 bg-[#f0f4fa]" id="hero">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
@@ -19,13 +19,14 @@ const HeroSection = ({ onJoinBeta }: HeroSectionProps) => {
           <Button 
             onClick={onJoinBeta} 
             size="lg" 
-            className="bg-[#1A1F2C] hover:bg-[#222222] font-semibold text-lg"
+            variant="neuDark"
+            className="font-semibold text-lg"
           >
             Join the Beta →
           </Button>
         </div>
         <div className="relative">
-          <div className="relative h-[400px] w-full overflow-hidden rounded-lg">
+          <div className="relative h-[400px] w-full overflow-hidden rounded-xl neumorphic">
             <div className="absolute -right-16 -top-16 w-64 h-64 bg-blue-300 rounded-full opacity-30"></div>
             <div className="absolute left-20 top-10 w-32 h-32 bg-purple-300 rounded-full opacity-30"></div>
             <div className="absolute -left-10 bottom-10 w-40 h-40 bg-primary/20 rounded-full"></div>
@@ -35,7 +36,7 @@ const HeroSection = ({ onJoinBeta }: HeroSectionProps) => {
               <img 
                 src="/classroom-image.jpg" 
                 alt="Inclusive classroom with students" 
-                className="object-cover w-full h-full rounded-lg shadow-xl"
+                className="object-cover w-full h-full rounded-xl shadow-inner"
               />
             </div>
           </div>

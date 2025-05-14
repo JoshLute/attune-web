@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 
 interface FooterProps {
@@ -14,12 +15,10 @@ const Footer = ({ onJoinBeta }: FooterProps) => {
             <p className="text-slate-300 mb-6 max-w-md">
               Real-time EEG insights that let neurodivergent students thrive. Creating more inclusive and effective learning environments.
             </p>
-            <Button onClick={onJoinBeta} variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
+            <Button onClick={onJoinBeta} variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900 neumorphic-button">
               Join the Beta
             </Button>
           </div>
-          
-          
           
           <div>
             <h4 className="font-bold mb-4 text-lg">Links</h4>
@@ -40,7 +39,6 @@ const Footer = ({ onJoinBeta }: FooterProps) => {
             </ul>
           </div>
         </div>
-        
         
         <div className="mt-12 pt-6 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-400 text-sm mb-4 md:mb-0">

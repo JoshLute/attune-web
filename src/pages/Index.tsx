@@ -21,7 +21,7 @@ const Index = () => {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-slate-50">
+    <div className="min-h-screen bg-[#f0f4fa]">
       {/* Navigation */}
       <MainNavigationMenu onJoinBeta={openModal} />
       

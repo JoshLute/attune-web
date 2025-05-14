@@ -21,18 +21,18 @@ const SolutionSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#f0f4fa]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Our Solution</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {solutions.map((solution, index) => (
             <div 
               key={index} 
-              className="bg-white p-6 rounded-lg shadow-lg border border-slate-100 relative overflow-hidden group hover:shadow-xl transition-shadow"
+              className="neumorphic-card p-6 rounded-xl relative overflow-hidden group transition-all duration-300"
             >
               <div className="absolute -right-12 -top-12 w-40 h-40 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-colors"></div>
               <div className="mb-6 relative">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 neumorphic-icon flex items-center justify-center">
                   <solution.icon className="w-8 h-8 text-primary" />
                 </div>
               </div>

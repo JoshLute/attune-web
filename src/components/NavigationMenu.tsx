@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { 
   NavigationMenu, 
@@ -39,7 +40,7 @@ const MainNavigationMenu = ({ onJoinBeta }: NavigationMenuProps) => {
   return (
     <div className={cn(
       "w-full fixed top-0 left-0 z-50 transition-all duration-300",
-      isScrolled ? "bg-white/90 shadow-md backdrop-blur-sm py-3" : "bg-transparent py-6"
+      isScrolled ? "bg-[#f0f4fa]/90 shadow-md backdrop-blur-sm py-3" : "bg-transparent py-6"
     )}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
@@ -54,7 +55,7 @@ const MainNavigationMenu = ({ onJoinBeta }: NavigationMenuProps) => {
                 <NavigationMenuItem key={item}>
                   <button 
                     onClick={() => scrollToSection(item.toLowerCase())}
-                    className="text-sm font-medium transition-colors hover:text-primary px-3 py-2 rounded-md"
+                    className="text-sm font-medium transition-colors hover:text-primary px-3.5 py-2 rounded-xl neumorphic-soft"
                   >
                     {item}
                   </button>
@@ -62,14 +63,14 @@ const MainNavigationMenu = ({ onJoinBeta }: NavigationMenuProps) => {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-          <Button onClick={onJoinBeta} className="bg-[#1A1F2C] hover:bg-[#222222] ml-4">
+          <Button onClick={onJoinBeta} variant="neuDark" className="ml-4">
             Join the Beta
           </Button>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
-          <Button variant="ghost" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <Button variant="neu" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="neumorphic-icon p-2">
             <Menu />
           </Button>
         </div>
@@ -77,19 +78,19 @@ const MainNavigationMenu = ({ onJoinBeta }: NavigationMenuProps) => {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg absolute w-full animate-fade-in">
+        <div className="md:hidden bg-[#f0f4fa] shadow-lg absolute w-full animate-fade-in neumorphic-inset">
           <div className="container mx-auto px-4 py-3">
             <nav className="flex flex-col space-y-3">
               {["Problem", "Solution", "Demo", "Pricing", "Features", "Resources", "About"].map((item) => (
                 <button 
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="text-sm font-medium py-2 hover:text-primary text-left"
+                  className="text-sm font-medium py-2.5 px-4 hover:text-primary text-left rounded-lg neumorphic-button"
                 >
                   {item}
                 </button>
               ))}
-              <Button onClick={onJoinBeta} className="bg-primary hover:bg-primary/90 w-full mt-2">
+              <Button onClick={onJoinBeta} variant="neuDark" className="w-full mt-2">
                 Join the Beta
               </Button>
             </nav>
