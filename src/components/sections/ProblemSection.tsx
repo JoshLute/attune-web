@@ -1,15 +1,19 @@
 
 const ProblemSection = () => {
   return (
-    <section className="bg-slate-50 py-20">
+    <section className="bg-slate-50 py-20" id="problem">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-10">
+          <div className="space-y-10 animate-fade-in">
             <div className="border-l-4 border-primary pl-6 py-2">
-              <p className="text-3xl md:text-4xl font-medium italic text-gray-700">"I can't see who's lost until test day."</p>
+              <p className="text-3xl md:text-4xl font-medium italic text-gray-700">
+                "I can't see who's lost until test day."
+              </p>
             </div>
             <div className="border-l-4 border-primary pl-6 py-2">
-              <p className="text-3xl md:text-4xl font-medium italic text-gray-700">"You don't know what you don't know."</p>
+              <p className="text-3xl md:text-4xl font-medium italic text-gray-700">
+                "You don't know what you don't know."
+              </p>
             </div>
             <div className="mt-8 bg-white rounded-lg p-6 shadow-lg">
               <p className="text-lg leading-relaxed text-gray-700">

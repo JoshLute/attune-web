@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { CalendlyModal } from "@/components/CalendlyModal";
+import MainNavigationMenu from "@/components/NavigationMenu";
 import HeroSection from "@/components/sections/HeroSection";
 import ProblemSection from "@/components/sections/ProblemSection";
 import SolutionSection from "@/components/sections/SolutionSection";
@@ -21,26 +22,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-slate-50">
-      {/* Header */}
-      <header className="container mx-auto py-6 px-4 flex justify-between items-center">
-        <div className="flex items-center">
-          <span className="text-2xl font-bold text-primary">attune</span>
-        </div>
-        <Button onClick={openModal} className="bg-primary hover:bg-primary/90">
-          Join the Beta
-        </Button>
-      </header>
-
-      <main>
+      {/* Navigation */}
+      <MainNavigationMenu onJoinBeta={openModal} />
+      
+      {/* Main Content with padding to account for fixed header */}
+      <main className="pt-24">
         <HeroSection onJoinBeta={openModal} />
-        <ProblemSection />
-        <SolutionSection />
-        <DemoSection />
-        <SocialProofSection />
-        <PricingSection onContactUs={openModal} />
-        <FeaturesSection />
-        <ResourcesSection />
-        <AboutSection />
+        <div id="problem"><ProblemSection /></div>
+        <div id="solution"><SolutionSection /></div>
+        <div id="demo"><DemoSection /></div>
+        <div id="socialproof"><SocialProofSection /></div>
+        <div id="pricing"><PricingSection onContactUs={openModal} /></div>
+        <div id="features"><FeaturesSection /></div>
+        <div id="resources"><ResourcesSection /></div>
+        <div id="about"><AboutSection /></div>
       </main>
 
       <Footer onJoinBeta={openModal} />
