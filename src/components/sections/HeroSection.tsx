@@ -19,7 +19,7 @@ const HeroSection = ({ onJoinBeta }: HeroSectionProps) => {
           <Button 
             onClick={onJoinBeta} 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 font-semibold text-lg"
+            className="bg-[#1A1F2C] hover:bg-[#222222] font-semibold text-lg"
           >
             Join the Beta →
           </Button>

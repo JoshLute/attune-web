@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 interface FooterProps {
@@ -20,6 +19,8 @@ const Footer = ({ onJoinBeta }: FooterProps) => {
             </Button>
           </div>
           
+          
+          
           <div>
             <h4 className="font-bold mb-4 text-lg">Links</h4>
             <ul className="space-y-2">
@@ -39,6 +40,7 @@ const Footer = ({ onJoinBeta }: FooterProps) => {
             </ul>
           </div>
         </div>
+        
         
         <div className="mt-12 pt-6 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-400 text-sm mb-4 md:mb-0">

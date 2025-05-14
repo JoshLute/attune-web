@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { 
   NavigationMenu, 
@@ -27,7 +26,7 @@ const MainNavigationMenu = ({ onJoinBeta }: NavigationMenuProps) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+  
   // Handle smooth scrolling
   const scrollToSection = (sectionId: string) => {
     setIsMobileMenuOpen(false);
@@ -63,7 +62,7 @@ const MainNavigationMenu = ({ onJoinBeta }: NavigationMenuProps) => {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-          <Button onClick={onJoinBeta} className="bg-primary hover:bg-primary/90 ml-4">
+          <Button onClick={onJoinBeta} className="bg-[#1A1F2C] hover:bg-[#222222] ml-4">
             Join the Beta
           </Button>
         </div>
