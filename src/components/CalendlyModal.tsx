@@ -1,5 +1,5 @@
-
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { useEffect } from "react";
 
 interface CalendlyModalProps {
   isOpen: boolean;
@@ -7,6 +7,18 @@ interface CalendlyModalProps {
 }
 
 export const CalendlyModal = ({ isOpen, onClose }: CalendlyModalProps) => {
+  useEffect(() => {
+    if (isOpen) {
+      const scriptSrc = "https://assets.calendly.com/assets/external/widget.js";
+      if (!document.querySelector(`script[src="${scriptSrc}"]`)) {
+        const script = document.createElement("script");
+        script.src = scriptSrc;
+        script.async = true;
+        document.body.appendChild(script);
+      }
+    }
+  }, [isOpen]);
+
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="sm:max-w-[600px] h-[80vh] neumorphic-card bg-[#f0f4fa] border-none">
@@ -14,17 +26,12 @@ export const CalendlyModal = ({ isOpen, onClose }: CalendlyModalProps) => {
           <DialogTitle>Schedule Your Beta Access</DialogTitle>
         </DialogHeader>
         <div className="h-full">
-          {/* In a production environment, replace with actual Calendly embed */}
-          <div className="w-full h-full min-h-[400px] neumorphic-inset rounded-lg flex items-center justify-center">
-            <div className="text-center p-6">
-              <h3 className="text-xl font-bold mb-4">Calendly Integration</h3>
-              <p className="text-gray-600 mb-4">
-                Here you would embed your Calendly scheduling widget for beta signups.
-              </p>
-              <p className="text-sm text-gray-500">
-                (In production, replace this with the actual Calendly embed code)
-              </p>
-            </div>
+          <div className="w-full h-full min-h-[400px] neumorphic-inset rounded-lg">
+            <div
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/joshuamlute/30min"
+              style={{ width: "100%", height: "100%" }}
+            />
           </div>
         </div>
       </DialogContent>
