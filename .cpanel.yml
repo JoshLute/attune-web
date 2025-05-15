@@ -1,0 +1,9 @@
+# .cpanel.yml  – cPanel will read this automatically
+---
+deployment:
+  tasks:
+    # 1 – tell cPanel where your live site lives
+    - export DEPLOYPATH=/home/attucuvv/public_html
+
+    # 2 – copy everything except the .git folder
+    - /bin/rsync -av --delete --exclude='.git/' ./ $DEPLOYPATH
