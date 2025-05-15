@@ -38,7 +38,9 @@ const PricingSection = ({ onContactUs }: PricingSectionProps) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Basic Plan */}
               <div className="neumorphic-card rounded-xl overflow-hidden">
-                <div className="px-6 py-12 bg-gradient-to-br from-white/90 via-primary/10 to-white/80 rounded-t-xl">
+                <div className="px-6 py-12 rounded-t-xl" style={{
+                  background: "radial-gradient(circle at center, #FFFFFF 0%, #f6f0fe 60%, #f0f4fa 100%)"
+                }}>
                   <h3 className="text-2xl font-bold text-center">Basic Plan</h3>
                   <div className="text-center mt-4">
                     <span className="text-5xl font-bold">$30</span>
@@ -91,7 +93,9 @@ const PricingSection = ({ onContactUs }: PricingSectionProps) => {
 
               {/* Pro Plan */}
               <div className="neumorphic-card rounded-xl overflow-hidden">
-                <div className="px-6 py-12 bg-gradient-to-br from-white/90 via-primary/15 to-white/70 rounded-t-xl">
+                <div className="px-6 py-12 rounded-t-xl" style={{
+                  background: "radial-gradient(circle at center, #FFFFFF 0%, #f0e3ff 60%, #f0f4fa 100%)"
+                }}>
                   <h3 className="text-2xl font-bold text-center">Pro Plan</h3>
                   <div className="text-center mt-4">
                     <span className="text-5xl font-bold">$50</span>
@@ -146,7 +150,9 @@ const PricingSection = ({ onContactUs }: PricingSectionProps) => {
           
           {activePlan === 'classroom' && (
             <div className="neumorphic-card rounded-xl overflow-hidden">
-              <div className="px-6 py-12 bg-gradient-to-br from-white/80 via-primary/15 to-white/70 rounded-t-xl">
+              <div className="px-6 py-12 rounded-t-xl" style={{
+                background: "radial-gradient(circle at center, #FFFFFF 0%, #e8dff8 60%, #f0f4fa 100%)"
+              }}>
                 <h3 className="text-2xl font-bold text-center">Classroom Bundle</h3>
                 <div className="text-center mt-4">
                   <span className="text-5xl font-bold">$199</span>
@@ -202,7 +208,9 @@ const PricingSection = ({ onContactUs }: PricingSectionProps) => {
           
           {activePlan === 'institutional' && (
             <div className="neumorphic-card rounded-xl overflow-hidden">
-              <div className="px-6 py-12 bg-gradient-to-br from-white/80 via-primary/20 to-white/60 rounded-t-xl">
+              <div className="px-6 py-12 rounded-t-xl" style={{
+                background: "radial-gradient(circle at center, #FFFFFF 0%, #e0d6f5 60%, #f0f4fa 100%)"
+              }}>
                 <h3 className="text-2xl font-bold text-center">Institutional License</h3>
                 <div className="text-center mt-4">
                   <span className="text-xl text-gray-700">Contact us for custom pricing</span>
