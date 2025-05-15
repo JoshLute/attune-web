@@ -1,18 +1,12 @@
-
 const AboutSection = () => {
-  return (
-    <section className="py-20 bg-white">
+  return <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">About Attune</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="col-span-1">
-              <img 
-                src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
-                alt="Founder" 
-                className="w-full h-auto rounded-lg shadow-md"
-              />
+              <img alt="Founder" className="w-full h-auto rounded-lg shadow-md" src="/lovable-uploads/4906c0b8-eb52-46dc-8c97-d3781b69d487.png" />
             </div>
             <div className="col-span-2">
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
@@ -47,8 +41,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
