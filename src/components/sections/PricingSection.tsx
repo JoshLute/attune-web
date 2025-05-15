@@ -40,14 +40,30 @@ const PricingSection = ({ onContactUs }: PricingSectionProps) => {
               <div className="neumorphic-card rounded-xl overflow-hidden">
                 <div className="px-6 py-12 rounded-t-xl relative overflow-hidden" 
                      style={{
-                       background: `radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.95) 0%, rgba(236, 225, 255, 0.9) 50%, rgba(221, 205, 255, 0.85) 100%)`,
-                       borderRadius: '16px 16px 0 0'
+                       background: `#f0f4fa`,
+                       borderRadius: '16px 16px 0 0',
+                       position: 'relative'
                      }}>
-                  <div className="absolute inset-0" 
+                  <div className="absolute inset-0 rounded-t-xl overflow-hidden" 
                        style={{
-                         background: 'radial-gradient(circle at 30% 30%, rgba(155, 135, 245, 0.25) 0%, rgba(155, 135, 245, 0.1) 40%, transparent 70%), radial-gradient(circle at 70% 70%, rgba(155, 135, 245, 0.25) 0%, rgba(155, 135, 245, 0.1) 30%, transparent 60%)',
+                         background: 'transparent',
                          borderRadius: '16px 16px 0 0'
-                       }}></div>
+                       }}>
+                    <div className="absolute inset-0 opacity-90"
+                         style={{
+                           background: 'radial-gradient(circle at 30% 50%, rgba(155, 135, 245, 0.6) 0%, rgba(155, 135, 245, 0.3) 25%, rgba(155, 135, 245, 0.1) 50%, transparent 80%)',
+                           filter: 'blur(15px)',
+                           borderRadius: '16px 16px 0 0',
+                           transform: 'scale(1.2)'
+                         }}></div>
+                    <div className="absolute inset-0 opacity-70"
+                         style={{
+                           background: 'radial-gradient(circle at 70% 30%, rgba(169, 151, 245, 0.5) 0%, rgba(169, 151, 245, 0.2) 30%, transparent 70%)',
+                           filter: 'blur(10px)',
+                           borderRadius: '16px 16px 0 0',
+                           transform: 'scale(1.1)'
+                         }}></div>
+                  </div>
                   <div className="relative z-10">
                     <h3 className="text-2xl font-bold text-center">Basic Plan</h3>
                     <div className="text-center mt-4">
@@ -104,14 +120,30 @@ const PricingSection = ({ onContactUs }: PricingSectionProps) => {
               <div className="neumorphic-card rounded-xl overflow-hidden">
                 <div className="px-6 py-12 rounded-t-xl relative overflow-hidden"
                      style={{
-                       background: `radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.95) 0%, rgba(236, 225, 255, 0.9) 50%, rgba(221, 205, 255, 0.85) 100%)`,
-                       borderRadius: '16px 16px 0 0'
+                       background: `#f0f4fa`,
+                       borderRadius: '16px 16px 0 0',
+                       position: 'relative'
                      }}>
-                  <div className="absolute inset-0" 
+                  <div className="absolute inset-0 rounded-t-xl overflow-hidden" 
                        style={{
-                         background: 'radial-gradient(circle at 30% 30%, rgba(155, 135, 245, 0.25) 0%, rgba(155, 135, 245, 0.1) 40%, transparent 70%), radial-gradient(circle at 70% 70%, rgba(155, 135, 245, 0.25) 0%, rgba(155, 135, 245, 0.1) 30%, transparent 60%)',
+                         background: 'transparent',
                          borderRadius: '16px 16px 0 0'
-                       }}></div>
+                       }}>
+                    <div className="absolute inset-0 opacity-90"
+                         style={{
+                           background: 'radial-gradient(circle at 30% 50%, rgba(155, 135, 245, 0.6) 0%, rgba(155, 135, 245, 0.3) 25%, rgba(155, 135, 245, 0.1) 50%, transparent 80%)',
+                           filter: 'blur(15px)',
+                           borderRadius: '16px 16px 0 0',
+                           transform: 'scale(1.2)'
+                         }}></div>
+                    <div className="absolute inset-0 opacity-70"
+                         style={{
+                           background: 'radial-gradient(circle at 70% 30%, rgba(169, 151, 245, 0.5) 0%, rgba(169, 151, 245, 0.2) 30%, transparent 70%)',
+                           filter: 'blur(10px)',
+                           borderRadius: '16px 16px 0 0',
+                           transform: 'scale(1.1)'
+                         }}></div>
+                  </div>
                   <div className="relative z-10">
                     <h3 className="text-2xl font-bold text-center">Pro Plan</h3>
                     <div className="text-center mt-4">
@@ -170,14 +202,30 @@ const PricingSection = ({ onContactUs }: PricingSectionProps) => {
             <div className="neumorphic-card rounded-xl overflow-hidden">
               <div className="px-6 py-12 rounded-t-xl relative overflow-hidden"
                    style={{
-                     background: `radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.95) 0%, rgba(236, 225, 255, 0.9) 50%, rgba(221, 205, 255, 0.85) 100%)`,
-                     borderRadius: '16px 16px 0 0'
+                     background: `#f0f4fa`,
+                     borderRadius: '16px 16px 0 0',
+                     position: 'relative'
                    }}>
-                <div className="absolute inset-0" 
+                <div className="absolute inset-0 rounded-t-xl overflow-hidden" 
                      style={{
-                       background: 'radial-gradient(circle at 30% 30%, rgba(155, 135, 245, 0.25) 0%, rgba(155, 135, 245, 0.1) 40%, transparent 70%), radial-gradient(circle at 70% 70%, rgba(155, 135, 245, 0.25) 0%, rgba(155, 135, 245, 0.1) 30%, transparent 60%)',
+                       background: 'transparent',
                        borderRadius: '16px 16px 0 0'
-                     }}></div>
+                     }}>
+                  <div className="absolute inset-0 opacity-90"
+                       style={{
+                         background: 'radial-gradient(circle at 30% 50%, rgba(155, 135, 245, 0.6) 0%, rgba(155, 135, 245, 0.3) 25%, rgba(155, 135, 245, 0.1) 50%, transparent 80%)',
+                         filter: 'blur(15px)',
+                         borderRadius: '16px 16px 0 0',
+                         transform: 'scale(1.2)'
+                       }}></div>
+                  <div className="absolute inset-0 opacity-70"
+                       style={{
+                         background: 'radial-gradient(circle at 70% 30%, rgba(169, 151, 245, 0.5) 0%, rgba(169, 151, 245, 0.2) 30%, transparent 70%)',
+                         filter: 'blur(10px)',
+                         borderRadius: '16px 16px 0 0',
+                         transform: 'scale(1.1)'
+                       }}></div>
+                </div>
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold text-center">Classroom Bundle</h3>
                   <div className="text-center mt-4">
@@ -237,14 +285,30 @@ const PricingSection = ({ onContactUs }: PricingSectionProps) => {
             <div className="neumorphic-card rounded-xl overflow-hidden">
               <div className="px-6 py-12 rounded-t-xl relative overflow-hidden"
                    style={{
-                     background: `radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.95) 0%, rgba(236, 225, 255, 0.9) 50%, rgba(221, 205, 255, 0.85) 100%)`,
-                     borderRadius: '16px 16px 0 0'
+                     background: `#f0f4fa`,
+                     borderRadius: '16px 16px 0 0',
+                     position: 'relative'
                    }}>
-                <div className="absolute inset-0" 
+                <div className="absolute inset-0 rounded-t-xl overflow-hidden" 
                      style={{
-                       background: 'radial-gradient(circle at 30% 30%, rgba(155, 135, 245, 0.25) 0%, rgba(155, 135, 245, 0.1) 40%, transparent 70%), radial-gradient(circle at 70% 70%, rgba(155, 135, 245, 0.25) 0%, rgba(155, 135, 245, 0.1) 30%, transparent 60%)',
+                       background: 'transparent',
                        borderRadius: '16px 16px 0 0'
-                     }}></div>
+                     }}>
+                  <div className="absolute inset-0 opacity-90"
+                       style={{
+                         background: 'radial-gradient(circle at 30% 50%, rgba(155, 135, 245, 0.6) 0%, rgba(155, 135, 245, 0.3) 25%, rgba(155, 135, 245, 0.1) 50%, transparent 80%)',
+                         filter: 'blur(15px)',
+                         borderRadius: '16px 16px 0 0',
+                         transform: 'scale(1.2)'
+                       }}></div>
+                  <div className="absolute inset-0 opacity-70"
+                       style={{
+                         background: 'radial-gradient(circle at 70% 30%, rgba(169, 151, 245, 0.5) 0%, rgba(169, 151, 245, 0.2) 30%, transparent 70%)',
+                         filter: 'blur(10px)',
+                         borderRadius: '16px 16px 0 0',
+                         transform: 'scale(1.1)'
+                       }}></div>
+                </div>
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold text-center">Institutional License</h3>
                   <div className="text-center mt-4">
