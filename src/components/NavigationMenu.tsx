@@ -47,7 +47,7 @@ const MainNavigationMenu = ({ onJoinBeta }: NavigationMenuProps) => {
           <img 
             src="/lovable-uploads/a404f1e5-bd18-4e6c-8317-cf24e4f5d87d.png" 
             alt="Attune Logo" 
-            className="h-10" 
+            className="h-16" 
           />
         </div>
 
