@@ -51,12 +51,6 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
     /* ... keep existing code (dark mode variables) */
   }
 }
@@ -141,4 +135,11 @@ section {
   @apply rounded-full p-2 bg-[#f0f4fa];
   box-shadow: 3px 3px 6px rgba(174, 174, 192, 0.3),
               -3px -3px 6px rgba(255, 255, 255, 0.7);
+}
+
+/* Custom style for YouTube play button */
+.youtube-play-button {
+  @apply bg-[#1A1F2C] text-white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
+              -5px -5px 10px rgba(255, 255, 255, 0.1);
 }

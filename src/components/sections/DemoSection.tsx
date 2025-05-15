@@ -15,21 +15,16 @@ const DemoSection = () => {
             onMouseLeave={() => setIsPlaying(false)}
           >
             <div className="aspect-video bg-black">
-              {/* In production, replace with actual video embed */}
-              <div className="w-full h-full flex items-center justify-center bg-gray-800 text-white">
-                <div className="text-center p-6">
-                  <h3 className="text-2xl font-bold mb-4">Attune Demo Video</h3>
-                  <p className="text-gray-300 mb-4">
-                    {isPlaying ? "Video is playing..." : "Hover to play demo"}
-                  </p>
-                  <p className="text-sm text-gray-400">
-                    (In production, replace this with actual YouTube/Vimeo embed)
-                  </p>
-                </div>
-              </div>
+              <iframe
+                src={`https://www.youtube.com/embed/U8sGYFZAP4I?autoplay=${isPlaying ? 1 : 0}&mute=${isPlaying ? 0 : 1}`}
+                className="w-full h-full border-0"
+                title="Attune Demo Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
             </div>
             <div className={`absolute inset-0 bg-black/30 flex items-center justify-center transition-opacity duration-300 ${isPlaying ? 'opacity-0' : 'opacity-100'}`}>
-              <div className="w-20 h-20 rounded-full neumorphic-button flex items-center justify-center">
+              <div className="w-20 h-20 rounded-full bg-[#222733] flex items-center justify-center">
                 <div className="w-0 h-0 border-t-8 border-b-8 border-l-16 border-t-transparent border-b-transparent border-l-white ml-2"></div>
               </div>
             </div>

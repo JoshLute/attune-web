@@ -10,13 +10,13 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "neumorphic-button bg-[#f0f4fa] text-slate-700 hover:text-slate-900",
+        default: "neumorphic-button bg-[#f0f4fa] text-slate-900 hover:text-black",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 neumorphic-button",
         outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground neumorphic-button",
-        secondary: "bg-[#e9ebef] text-secondary-foreground hover:bg-[#e0e4ed] neumorphic-button",
+        secondary: "bg-[#e0e4ed] text-slate-900 hover:bg-[#d8dce5] neumorphic-button",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        neu: "neumorphic-button bg-[#f0f4fa] text-slate-700 hover:text-slate-900",
+        neu: "neumorphic-button bg-[#f0f4fa] text-slate-900 hover:text-black",
         neuDark: "neumorphic-button bg-[#1A1F2C] text-white hover:bg-[#222733]",
       },
       size: {
