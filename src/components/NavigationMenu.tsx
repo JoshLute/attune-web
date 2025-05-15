@@ -44,7 +44,11 @@ const MainNavigationMenu = ({ onJoinBeta }: NavigationMenuProps) => {
     )}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <span className="text-2xl font-bold text-primary">attune</span>
+          <img 
+            src="/lovable-uploads/a404f1e5-bd18-4e6c-8317-cf24e4f5d87d.png" 
+            alt="Attune Logo" 
+            className="h-10" 
+          />
         </div>
 
         {/* Desktop Navigation */}
