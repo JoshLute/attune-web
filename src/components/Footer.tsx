@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 interface FooterProps {
@@ -15,7 +14,7 @@ const Footer = ({ onJoinBeta }: FooterProps) => {
             <p className="text-slate-300 mb-6 max-w-md">
               Real-time EEG insights that let neurodivergent students thrive. Creating more inclusive and effective learning environments.
             </p>
-            <Button onClick={onJoinBeta} variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900 neumorphic-button">
+            <Button onClick={onJoinBeta} variant="neuDark" className="border-[#1A1F2C] hover:border-[#222733]">
               Join the Beta
             </Button>
           </div>

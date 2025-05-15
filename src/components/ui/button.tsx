@@ -17,7 +17,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         neu: "neumorphic-button bg-[#f0f4fa] text-slate-900 hover:text-black",
-        neuDark: "neumorphic-button bg-[#1A1F2C] text-white hover:bg-[#222733]",
+        neuDark: "neumorphic-button bg-[#1A1F2C] text-[#9b87f5] hover:bg-[#222733] hover:text-[#a79af8]",
       },
       size: {
         default: "h-10 px-5 py-2.5",
