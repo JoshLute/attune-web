@@ -1,9 +1,12 @@
 # .cpanel.yml  – cPanel will read this automatically
 ---
 deployment:
+  # run on “Deploy HEAD Commit” or “Update from Remote”
   tasks:
-    # 1 – tell cPanel where your live site lives
-    - export DEPLOYPATH=/home/attucuvv/public_html
-
-    # 2 – copy everything except the .git folder
-    - /bin/rsync -av --delete --exclude='.git/' ./ $DEPLOYPATH
+    - echo "→ Building Attune-Web…"
+    - cd $repository
+    - npm install --production
+    - npm run build
+    - echo "→ Copying to public_html…"
+    - rm -rf ~/public_html/*
+    - cp -R dist/* ~/public_html/
