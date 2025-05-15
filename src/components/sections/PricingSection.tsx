@@ -38,39 +38,12 @@ const PricingSection = ({ onContactUs }: PricingSectionProps) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Basic Plan */}
               <div className="neumorphic-card rounded-xl overflow-hidden">
-                <div className="px-6 py-12 rounded-t-xl relative overflow-hidden" 
-                     style={{
-                       background: `#f0f4fa`,
-                       borderRadius: '16px 16px 0 0',
-                       position: 'relative'
-                     }}>
-                  <div className="absolute inset-0 rounded-t-xl overflow-hidden" 
-                       style={{
-                         background: 'transparent',
-                         borderRadius: '16px 16px 0 0'
-                       }}>
-                    <div className="absolute inset-0 opacity-90"
-                         style={{
-                           background: 'radial-gradient(circle at 30% 50%, rgba(155, 135, 245, 0.6) 0%, rgba(155, 135, 245, 0.3) 25%, rgba(155, 135, 245, 0.1) 50%, transparent 80%)',
-                           filter: 'blur(15px)',
-                           borderRadius: '16px 16px 0 0',
-                           transform: 'scale(1.2)'
-                         }}></div>
-                    <div className="absolute inset-0 opacity-70"
-                         style={{
-                           background: 'radial-gradient(circle at 70% 30%, rgba(169, 151, 245, 0.5) 0%, rgba(169, 151, 245, 0.2) 30%, transparent 70%)',
-                           filter: 'blur(10px)',
-                           borderRadius: '16px 16px 0 0',
-                           transform: 'scale(1.1)'
-                         }}></div>
-                  </div>
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-bold text-center">Basic Plan</h3>
-                    <div className="text-center mt-4">
-                      <span className="text-5xl font-bold">$30</span>
-                      <span className="text-xl ml-1 text-gray-600">/month</span>
-                      <div className="text-sm text-gray-500 mt-1">($360 /year)</div>
-                    </div>
+                <div className="px-6 py-12 bg-gradient-to-br from-white/90 via-primary/10 to-white/80 rounded-t-xl">
+                  <h3 className="text-2xl font-bold text-center">Basic Plan</h3>
+                  <div className="text-center mt-4">
+                    <span className="text-5xl font-bold">$30</span>
+                    <span className="text-xl ml-1 text-gray-600">/month</span>
+                    <div className="text-sm text-gray-500 mt-1">($360 /year)</div>
                   </div>
                 </div>
                 
@@ -118,39 +91,12 @@ const PricingSection = ({ onContactUs }: PricingSectionProps) => {
 
               {/* Pro Plan */}
               <div className="neumorphic-card rounded-xl overflow-hidden">
-                <div className="px-6 py-12 rounded-t-xl relative overflow-hidden"
-                     style={{
-                       background: `#f0f4fa`,
-                       borderRadius: '16px 16px 0 0',
-                       position: 'relative'
-                     }}>
-                  <div className="absolute inset-0 rounded-t-xl overflow-hidden" 
-                       style={{
-                         background: 'transparent',
-                         borderRadius: '16px 16px 0 0'
-                       }}>
-                    <div className="absolute inset-0 opacity-90"
-                         style={{
-                           background: 'radial-gradient(circle at 30% 50%, rgba(155, 135, 245, 0.6) 0%, rgba(155, 135, 245, 0.3) 25%, rgba(155, 135, 245, 0.1) 50%, transparent 80%)',
-                           filter: 'blur(15px)',
-                           borderRadius: '16px 16px 0 0',
-                           transform: 'scale(1.2)'
-                         }}></div>
-                    <div className="absolute inset-0 opacity-70"
-                         style={{
-                           background: 'radial-gradient(circle at 70% 30%, rgba(169, 151, 245, 0.5) 0%, rgba(169, 151, 245, 0.2) 30%, transparent 70%)',
-                           filter: 'blur(10px)',
-                           borderRadius: '16px 16px 0 0',
-                           transform: 'scale(1.1)'
-                         }}></div>
-                  </div>
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-bold text-center">Pro Plan</h3>
-                    <div className="text-center mt-4">
-                      <span className="text-5xl font-bold">$50</span>
-                      <span className="text-xl ml-1 text-gray-600">/month</span>
-                      <div className="text-sm text-gray-500 mt-1">($600 /year)</div>
-                    </div>
+                <div className="px-6 py-12 bg-gradient-to-br from-white/90 via-primary/15 to-white/70 rounded-t-xl">
+                  <h3 className="text-2xl font-bold text-center">Pro Plan</h3>
+                  <div className="text-center mt-4">
+                    <span className="text-5xl font-bold">$50</span>
+                    <span className="text-xl ml-1 text-gray-600">/month</span>
+                    <div className="text-sm text-gray-500 mt-1">($600 /year)</div>
                   </div>
                 </div>
                 
@@ -200,38 +146,11 @@ const PricingSection = ({ onContactUs }: PricingSectionProps) => {
           
           {activePlan === 'classroom' && (
             <div className="neumorphic-card rounded-xl overflow-hidden">
-              <div className="px-6 py-12 rounded-t-xl relative overflow-hidden"
-                   style={{
-                     background: `#f0f4fa`,
-                     borderRadius: '16px 16px 0 0',
-                     position: 'relative'
-                   }}>
-                <div className="absolute inset-0 rounded-t-xl overflow-hidden" 
-                     style={{
-                       background: 'transparent',
-                       borderRadius: '16px 16px 0 0'
-                     }}>
-                  <div className="absolute inset-0 opacity-90"
-                       style={{
-                         background: 'radial-gradient(circle at 30% 50%, rgba(155, 135, 245, 0.6) 0%, rgba(155, 135, 245, 0.3) 25%, rgba(155, 135, 245, 0.1) 50%, transparent 80%)',
-                         filter: 'blur(15px)',
-                         borderRadius: '16px 16px 0 0',
-                         transform: 'scale(1.2)'
-                       }}></div>
-                  <div className="absolute inset-0 opacity-70"
-                       style={{
-                         background: 'radial-gradient(circle at 70% 30%, rgba(169, 151, 245, 0.5) 0%, rgba(169, 151, 245, 0.2) 30%, transparent 70%)',
-                         filter: 'blur(10px)',
-                         borderRadius: '16px 16px 0 0',
-                         transform: 'scale(1.1)'
-                       }}></div>
-                </div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-center">Classroom Bundle</h3>
-                  <div className="text-center mt-4">
-                    <span className="text-5xl font-bold">$199</span>
-                    <span className="text-xl ml-1 text-gray-600">/month</span>
-                  </div>
+              <div className="px-6 py-12 bg-gradient-to-br from-white/80 via-primary/15 to-white/70 rounded-t-xl">
+                <h3 className="text-2xl font-bold text-center">Classroom Bundle</h3>
+                <div className="text-center mt-4">
+                  <span className="text-5xl font-bold">$199</span>
+                  <span className="text-xl ml-1 text-gray-600">/month</span>
                 </div>
               </div>
               
@@ -283,37 +202,10 @@ const PricingSection = ({ onContactUs }: PricingSectionProps) => {
           
           {activePlan === 'institutional' && (
             <div className="neumorphic-card rounded-xl overflow-hidden">
-              <div className="px-6 py-12 rounded-t-xl relative overflow-hidden"
-                   style={{
-                     background: `#f0f4fa`,
-                     borderRadius: '16px 16px 0 0',
-                     position: 'relative'
-                   }}>
-                <div className="absolute inset-0 rounded-t-xl overflow-hidden" 
-                     style={{
-                       background: 'transparent',
-                       borderRadius: '16px 16px 0 0'
-                     }}>
-                  <div className="absolute inset-0 opacity-90"
-                       style={{
-                         background: 'radial-gradient(circle at 30% 50%, rgba(155, 135, 245, 0.6) 0%, rgba(155, 135, 245, 0.3) 25%, rgba(155, 135, 245, 0.1) 50%, transparent 80%)',
-                         filter: 'blur(15px)',
-                         borderRadius: '16px 16px 0 0',
-                         transform: 'scale(1.2)'
-                       }}></div>
-                  <div className="absolute inset-0 opacity-70"
-                       style={{
-                         background: 'radial-gradient(circle at 70% 30%, rgba(169, 151, 245, 0.5) 0%, rgba(169, 151, 245, 0.2) 30%, transparent 70%)',
-                         filter: 'blur(10px)',
-                         borderRadius: '16px 16px 0 0',
-                         transform: 'scale(1.1)'
-                       }}></div>
-                </div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-center">Institutional License</h3>
-                  <div className="text-center mt-4">
-                    <span className="text-xl text-gray-700">Contact us for custom pricing</span>
-                  </div>
+              <div className="px-6 py-12 bg-gradient-to-br from-white/80 via-primary/20 to-white/60 rounded-t-xl">
+                <h3 className="text-2xl font-bold text-center">Institutional License</h3>
+                <div className="text-center mt-4">
+                  <span className="text-xl text-gray-700">Contact us for custom pricing</span>
                 </div>
               </div>
               
