@@ -1,3 +1,4 @@
+
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useEffect } from "react";
 
@@ -21,16 +22,16 @@ export const CalendlyModal = ({ isOpen, onClose }: CalendlyModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="sm:max-w-[600px] h-[80vh] neumorphic-card bg-[#f0f4fa] border-none">
+      <DialogContent className="sm:max-w-[600px] h-[600px] neumorphic-card bg-[#f0f4fa] border-none">
         <DialogHeader>
           <DialogTitle>Schedule Your Beta Access</DialogTitle>
         </DialogHeader>
-        <div className="h-full">
-          <div className="w-full h-full min-h-[400px] neumorphic-inset rounded-lg">
+        <div className="h-[520px]">
+          <div className="w-full h-full neumorphic-inset rounded-lg">
             <div
               className="calendly-inline-widget"
               data-url="https://calendly.com/joshuamlute/30min"
-              style={{ width: "100%", height: "100%" }}
+              style={{ width: "100%", height: "100%", position: "relative", top: "-20px" }}
             />
           </div>
         </div>
