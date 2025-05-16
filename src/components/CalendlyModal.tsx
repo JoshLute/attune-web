@@ -31,7 +31,7 @@ export const CalendlyModal = ({ isOpen, onClose }: CalendlyModalProps) => {
             <div
               className="calendly-inline-widget"
               data-url="https://calendly.com/joshuamlute/30min"
-              style={{ width: "100%", height: "100%", position: "relative", top: "+20px" }}
+              style={{ width: "100%", height: "100%", position: "relative"}}
             />
           </div>
         </div>
