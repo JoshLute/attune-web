@@ -11,9 +11,7 @@ const HeroSection = ({
           <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
             Real-time Insights for Smarter Classrooms
           </h1>
-          <p className="text-xl mb-8 text-gray-700">
-            Real-time EEG insights that let neurodivergent students thrive.
-          </p>
+          <p className="text-xl mb-8 text-gray-700">We use AI and  brainwave data to track neurodivergent student learning to let teachers know exactly what they missed. </p>
           <Button onClick={onJoinBeta} size="lg" variant="neuDark" className="font-semibold text-lg">
             Join the Beta →
           </Button>
