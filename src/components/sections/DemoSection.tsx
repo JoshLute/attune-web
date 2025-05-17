@@ -1,10 +1,77 @@
 
-import { useState, useRef } from "react";
-import { Play, Youtube } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { Play, Pause, Youtube } from "lucide-react";
+
+declare global {
+  interface Window {
+    onYouTubeIframeAPIReady: () => void;
+    YT: any;
+  }
+}
 
 const DemoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showControls, setShowControls] = useState(false);
+  const [isAPIReady, setIsAPIReady] = useState(false);
+  const playerRef = useRef<any>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Load YouTube iframe API
+  useEffect(() => {
+    // Check if script already exists
+    if (!document.getElementById("youtube-api")) {
+      const tag = document.createElement("script");
+      tag.id = "youtube-api";
+      tag.src = "https://www.youtube.com/iframe_api";
+      const firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
+
+      window.onYouTubeIframeAPIReady = () => {
+        setIsAPIReady(true);
+      };
+    } else {
+      setIsAPIReady(true);
+    }
+
+    return () => {
+      if (playerRef.current) {
+        playerRef.current.destroy();
+      }
+    };
+  }, []);
+
+  // Initialize YouTube player once API is ready
+  useEffect(() => {
+    if (isAPIReady && containerRef.current) {
+      playerRef.current = new window.YT.Player("youtube-player", {
+        videoId: "U8sGYFZAP4I",
+        playerVars: {
+          rel: 0,
+          modestbranding: 1,
+          enablejsapi: 1,
+        },
+        events: {
+          onStateChange: (event: any) => {
+            setIsPlaying(event.data === window.YT.PlayerState.PLAYING);
+          },
+          onReady: () => {
+            // Player is ready to receive commands
+            console.log("YouTube player ready");
+          },
+        },
+      });
+    }
+  }, [isAPIReady]);
+
+  const togglePlay = () => {
+    if (!playerRef.current) return;
+    
+    if (isPlaying) {
+      playerRef.current.pauseVideo();
+    } else {
+      playerRef.current.playVideo();
+    }
+  };
 
   return (
     <section className="py-20 bg-[#f0f4fa]">
@@ -15,26 +82,27 @@ const DemoSection = () => {
             className="relative rounded-xl overflow-hidden neumorphic"
             onMouseEnter={() => setShowControls(true)}
             onMouseLeave={() => setShowControls(false)}
+            ref={containerRef}
           >
             <div className="aspect-video bg-black">
-              <iframe
-                src="https://www.youtube.com/embed/U8sGYFZAP4I?enablejsapi=1&rel=0"
-                className="w-full h-full border-0"
-                title="Attune Demo Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <div id="youtube-player" className="w-full h-full"></div>
             </div>
             
+            {/* Play/Pause overlay button */}
             <div 
-              className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isPlaying || showControls ? 'opacity-0' : 'opacity-100'}`}
-              onClick={() => setIsPlaying(true)}
+              className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isPlaying || showControls ? 'opacity-0' : 'opacity-100'} cursor-pointer`}
+              onClick={togglePlay}
             >
-              <div className="w-20 h-20 rounded-full bg-[#222733] flex items-center justify-center cursor-pointer">
-                <Play className="h-10 w-10 text-white ml-1" />
+              <div className="w-20 h-20 rounded-full bg-[#222733] flex items-center justify-center">
+                {isPlaying ? (
+                  <Pause className="h-10 w-10 text-white" />
+                ) : (
+                  <Play className="h-10 w-10 text-white ml-1" />
+                )}
               </div>
             </div>
             
+            {/* Watch on YouTube button */}
             <a 
               href="https://www.youtube.com/watch?v=U8sGYFZAP4I" 
               target="_blank" 
