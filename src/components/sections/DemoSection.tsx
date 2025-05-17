@@ -1,8 +1,10 @@
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { Play, Youtube } from "lucide-react";
 
 const DemoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showControls, setShowControls] = useState(false);
 
   return (
     <section className="py-20 bg-[#f0f4fa]">
@@ -11,23 +13,37 @@ const DemoSection = () => {
         <div className="max-w-4xl mx-auto">
           <div 
             className="relative rounded-xl overflow-hidden neumorphic"
-            onMouseEnter={() => setIsPlaying(true)}
-            onMouseLeave={() => setIsPlaying(false)}
+            onMouseEnter={() => setShowControls(true)}
+            onMouseLeave={() => setShowControls(false)}
           >
             <div className="aspect-video bg-black">
               <iframe
-                src={`https://www.youtube.com/embed/U8sGYFZAP4I?autoplay=${isPlaying ? 1 : 0}&mute=${isPlaying ? 0 : 1}`}
+                src="https://www.youtube.com/embed/U8sGYFZAP4I?enablejsapi=1&rel=0"
                 className="w-full h-full border-0"
                 title="Attune Demo Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>
             </div>
-            <div className={`absolute inset-0 bg-black/30 flex items-center justify-center transition-opacity duration-300 ${isPlaying ? 'opacity-0' : 'opacity-100'}`}>
-              <div className="w-20 h-20 rounded-full bg-[#222733] flex items-center justify-center">
-                <div className="w-0 h-0 border-t-8 border-b-8 border-l-16 border-t-transparent border-b-transparent border-l-white ml-2"></div>
+            
+            <div 
+              className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isPlaying || showControls ? 'opacity-0' : 'opacity-100'}`}
+              onClick={() => setIsPlaying(true)}
+            >
+              <div className="w-20 h-20 rounded-full bg-[#222733] flex items-center justify-center cursor-pointer">
+                <Play className="h-10 w-10 text-white ml-1" />
               </div>
             </div>
+            
+            <a 
+              href="https://www.youtube.com/watch?v=U8sGYFZAP4I" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={`absolute top-4 right-4 bg-black/70 text-white p-2 rounded-lg flex items-center gap-1 transition-opacity duration-300 ${showControls ? 'opacity-100' : 'opacity-0'}`}
+            >
+              <Youtube className="h-4 w-4" />
+              <span className="text-sm">Watch on YouTube</span>
+            </a>
           </div>
           <p className="text-center mt-6 text-lg text-gray-700">
             Watch Attune pinpoint confusion in real time—no extra hardware beyond Muse S.
