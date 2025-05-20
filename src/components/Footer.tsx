@@ -1,16 +1,15 @@
 import { Button } from "@/components/ui/button";
-
 interface FooterProps {
   onJoinBeta: () => void;
 }
-
-const Footer = ({ onJoinBeta }: FooterProps) => {
-  return (
-    <footer className="bg-slate-900 text-white py-12">
+const Footer = ({
+  onJoinBeta
+}: FooterProps) => {
+  return <footer className="bg-slate-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">attune</h3>
+            <h3 className="text-2xl font-bold mb-4">Attune</h3>
             <p className="text-slate-300 mb-6 max-w-md">
               Real-time EEG insights that let neurodivergent students thrive. Creating more inclusive and effective learning environments.
             </p>
@@ -30,11 +29,11 @@ const Footer = ({ onJoinBeta }: FooterProps) => {
           </div>
           
           <div>
-            <h4 className="font-bold mb-4 text-lg">Contact</h4>
+            
             <ul className="space-y-2">
-              <li><a href="mailto:info@attune.pro" className="text-slate-300 hover:text-white">info@attune.pro</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-white">Support</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-white">Careers</a></li>
+              
+              
+              
             </ul>
           </div>
         </div>
@@ -44,15 +43,9 @@ const Footer = ({ onJoinBeta }: FooterProps) => {
             © {new Date().getFullYear()} Attune. All rights reserved.
           </p>
           
-          <div className="flex space-x-6">
-            <img src="/placeholder.svg" alt="Muse" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-            <img src="/placeholder.svg" alt="Google Classroom" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-            <img src="/placeholder.svg" alt="EdTech Conference" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-          </div>
+          
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

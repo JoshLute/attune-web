@@ -19,26 +19,7 @@ const AboutSection = () => {
             </div>
           </div>
           
-          <div className="bg-slate-50 p-8 rounded-xl">
-            <h3 className="text-xl font-bold mb-4 text-center">Trust & Compliance</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div>
-                <h4 className="font-medium mb-2">Privacy</h4>
-                <p className="text-sm text-gray-600 mb-2">Your data security is our priority</p>
-                <a href="#" className="text-primary text-sm hover:underline">Privacy Policy</a>
-              </div>
-              <div>
-                <h4 className="font-medium mb-2">Compliance</h4>
-                <p className="text-sm text-gray-600 mb-2">COPPA/GDPR compliant</p>
-                <a href="#" className="text-primary text-sm hover:underline">Compliance Details</a>
-              </div>
-              <div>
-                <h4 className="font-medium mb-2">Accessibility</h4>
-                <p className="text-sm text-gray-600 mb-2">Built for everyone</p>
-                <a href="#" className="text-primary text-sm hover:underline">Accessibility Statement</a>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>;
