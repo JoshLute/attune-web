@@ -12,12 +12,18 @@ declare global {
 const DemoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showControls, setShowControls] = useState(false);
-  const [isAPIReady, setIsAPIReady] = useState(false);
   const playerRef = useRef<any>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [apiLoaded, setApiLoaded] = useState(false);
 
   // Load YouTube iframe API
   useEffect(() => {
+    // First, define the callback function that will be called when the API is ready
+    window.onYouTubeIframeAPIReady = () => {
+      console.log("YouTube API is ready");
+      setApiLoaded(true);
+    };
+
     // Check if script already exists
     if (!document.getElementById("youtube-api")) {
       const tag = document.createElement("script");
@@ -25,51 +31,64 @@ const DemoSection = () => {
       tag.src = "https://www.youtube.com/iframe_api";
       const firstScriptTag = document.getElementsByTagName("script")[0];
       firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
-
-      window.onYouTubeIframeAPIReady = () => {
-        setIsAPIReady(true);
-      };
-    } else {
-      setIsAPIReady(true);
+    } else if (window.YT && window.YT.Player) {
+      // If the script already exists and API is loaded
+      setApiLoaded(true);
     }
 
     return () => {
       if (playerRef.current) {
-        playerRef.current.destroy();
+        try {
+          playerRef.current.destroy();
+        } catch (e) {
+          console.error("Error destroying player:", e);
+        }
       }
     };
   }, []);
 
   // Initialize YouTube player once API is ready
   useEffect(() => {
-    if (isAPIReady && containerRef.current) {
+    if (!apiLoaded || !containerRef.current) return;
+    
+    try {
+      console.log("Initializing YouTube player");
       playerRef.current = new window.YT.Player("youtube-player", {
         videoId: "U8sGYFZAP4I",
         playerVars: {
           rel: 0,
           modestbranding: 1,
           enablejsapi: 1,
+          controls: 1,
         },
         events: {
           onStateChange: (event: any) => {
             setIsPlaying(event.data === window.YT.PlayerState.PLAYING);
           },
           onReady: () => {
-            // Player is ready to receive commands
             console.log("YouTube player ready");
           },
+          onError: (e: any) => {
+            console.error("YouTube player error:", e);
+          }
         },
       });
+    } catch (error) {
+      console.error("Error initializing YouTube player:", error);
     }
-  }, [isAPIReady]);
+  }, [apiLoaded]);
 
   const togglePlay = () => {
     if (!playerRef.current) return;
     
-    if (isPlaying) {
-      playerRef.current.pauseVideo();
-    } else {
-      playerRef.current.playVideo();
+    try {
+      if (isPlaying) {
+        playerRef.current.pauseVideo();
+      } else {
+        playerRef.current.playVideo();
+      }
+    } catch (e) {
+      console.error("Error toggling play state:", e);
     }
   };
 
