@@ -10,16 +10,16 @@ const AboutSection = () => {
             </div>
             <div className="col-span-2">
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-              <p className="text-gray-700 mb-6">Attune was founded by a team of undergraduate engineers with one mission: bridge the disconnect between students, teachers, and parents—using real-time insight to unlock every learner’s potential. 
+              <p className="text-gray-700 mb-6 text-left">Attune was founded by a team of undergraduate engineers with one mission: bridge the disconnect between students, teachers, and parents—using real-time insight to unlock every learner’s potential.  
 
 
- We built Attune to deliver personalization at scale. By combining cognitive data with intuitive dashboards, we empower educators to make smarter decisions and give students the support they need, when they need it.
+ We built Attune to deliver personalization at scale. By combining cognitive data with intuitive dashboards, we empower educators to make smarter decisions and give students the support they need, when they need it.  
 
 
- Our journey began at UCLA’s hackathon, where we built the first prototype—and won. That moment proved there’s real demand for what we’re building. 
+Our journey began at UCLA’s hackathon, where we built the first prototype—and won. That moment proved there’s real demand for what we’re building.   
 
 
- Today, Attune is more than a student success tool. It’s an early-warning system for attention, understanding, and engagement—designed to work at the speed of the classroom.</p>
+Today, Attune is more than a student success tool. It’s an early-warning system for attention, understanding, and engagement—designed to work at the speed of the classroom.</p>
               
             </div>
           </div>
