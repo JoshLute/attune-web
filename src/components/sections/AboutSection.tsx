@@ -10,12 +10,17 @@ const AboutSection = () => {
             </div>
             <div className="col-span-2">
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-              <p className="text-gray-700 mb-6">
-                Attune was founded with a clear purpose: to bridge the gap between how neurodivergent students learn and how teachers teach. Our founder, a former special education teacher with a background in neuroscience, experienced firsthand the challenges of understanding what's happening in students' minds during learning.
-              </p>
-              <p className="text-gray-700">
-                We believe that by providing real-time cognitive insights, we can create more inclusive, effective, and personalized learning environments where every student—regardless of neurological differences—can truly thrive. Our mission is to transform education by making the invisible visible, giving teachers the tools they need to reach every mind in their classroom.
-              </p>
+              <p className="text-gray-700 mb-6">Attune was founded by a team of undergraduate engineers with one mission: bridge the disconnect between students, teachers, and parents—using real-time insight to unlock every learner’s potential. 
+
+
+ We built Attune to deliver personalization at scale. By combining cognitive data with intuitive dashboards, we empower educators to make smarter decisions and give students the support they need, when they need it.
+
+
+ Our journey began at UCLA’s hackathon, where we built the first prototype—and won. That moment proved there’s real demand for what we’re building. 
+
+
+ Today, Attune is more than a student success tool. It’s an early-warning system for attention, understanding, and engagement—designed to work at the speed of the classroom.</p>
+              
             </div>
           </div>
           
