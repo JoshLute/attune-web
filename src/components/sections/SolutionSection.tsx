@@ -1,5 +1,5 @@
 
-import { Brain, Activity, LineChart } from "lucide-react";
+import { Brain, Bot, LineChart } from "lucide-react";
 
 const SolutionSection = () => {
   const solutions = [
@@ -9,13 +9,13 @@ const SolutionSection = () => {
       icon: Brain,
     },
     {
-      title: "Engagement Dashboard",
-      description: "View class-wide engagement patterns and identify which teaching methods are most effective for different learning styles.",
-      icon: Activity,
+      title: "AI Integration",
+      description: "Our AI assistant helps teachers understand what's happening in their classroom by analyzing cognitive data and providing real-time insights about student engagement and comprehension.",
+      icon: Bot,
     },
     {
       title: "AI Lesson Recaps",
-      description: "Get AI-generated summaries of your lesson highlighting key moments of engagement and confusion with actionable recommendations.",
+      description: "Get AI-generated summaries of your lesson highlighting key moments of engagement and confusion with actionable recommendations for improvement.",
       icon: LineChart,
     }
   ];
@@ -24,7 +24,9 @@ const SolutionSection = () => {
     <section className="py-20 bg-[#f0f4fa]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Our Solution</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        
+        {/* Solutions Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
           {solutions.map((solution, index) => (
             <div 
               key={index} 
@@ -40,6 +42,39 @@ const SolutionSection = () => {
               <p className="text-gray-600">{solution.description}</p>
             </div>
           ))}
+        </div>
+
+        {/* Product Screenshots */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-20">
+          {/* Student Dashboard */}
+          <div className="neumorphic-card p-6 rounded-xl">
+            <h3 className="text-2xl font-bold mb-4 text-center">Real-Time Student Monitoring</h3>
+            <div className="rounded-lg overflow-hidden mb-4">
+              <img 
+                src="/lovable-uploads/2091d038-a70d-4ec3-b02f-1b107fed04ee.png" 
+                alt="Student dashboard showing JP Vela's real-time cognitive tracking data"
+                className="w-full h-auto"
+              />
+            </div>
+            <p className="text-gray-600 text-center">
+              See exactly how each student is processing information in real-time. Track cognitive load, attention levels, and moments of confusion to provide targeted support.
+            </p>
+          </div>
+
+          {/* AI Assistant */}
+          <div className="neumorphic-card p-6 rounded-xl">
+            <h3 className="text-2xl font-bold mb-4 text-center">AI Teaching Assistant</h3>
+            <div className="rounded-lg overflow-hidden mb-4">
+              <img 
+                src="/lovable-uploads/5a2c6794-8c42-451a-ad43-a6425c6912a9.png" 
+                alt="AI assistant interface showing collaboration hub and chat functionality"
+                className="w-full h-auto"
+              />
+            </div>
+            <p className="text-gray-600 text-center">
+              Our AI analyzes classroom cognitive data and provides instant insights, suggestions, and answers to help you understand and support every student's learning journey.
+            </p>
+          </div>
         </div>
       </div>
     </section>
