@@ -48,7 +48,7 @@ const SolutionSection = () => {
           <div className="neumorphic-card p-6 rounded-xl">
             <h3 className="text-2xl font-bold mb-4 text-center">AI Teaching Assistant</h3>
             <div className="rounded-lg overflow-hidden mb-4">
-              <img src="/lovable-uploads/5a2c6794-8c42-451a-ad43-a6425c6912a9.png" alt="AI assistant interface showing collaboration hub and chat functionality" className="w-full h-auto" />
+              <img alt="AI assistant interface showing collaboration hub and chat functionality" className="w-full h-auto" src="/lovable-uploads/edb28901-2306-497d-aaec-c7bc60c1fea5.png" />
             </div>
             <p className="text-gray-600 text-center">
               Our AI analyzes classroom cognitive data and provides instant insights, suggestions, and answers to help you understand and support every student's learning journey.
