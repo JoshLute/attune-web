@@ -45,9 +45,7 @@ const ProblemSection = () => {
                     "I can't see who's lost until test day."
                   </p>
                 </div>
-                <p className="text-slate-600 text-lg">
-                  - High School Math Teacher
-                </p>
+                <p className="text-slate-600 text-lg"> Mrs. Liu, High School Math Teacher</p>
               </div>
             </div>
             
